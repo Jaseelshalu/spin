@@ -1,38 +1,156 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.spin{
+width: 100%;
+height: 100vh;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+font-size: 0.5rem;
+
+z-index: 100;
+background-image: linear-gradient(to bottom, #000000, #1b161b, #272734, #253b4e, #185260);
+
+}
+.spin-container{
+    width: 100%;
+    display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 1rem;
+}
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
+}
+.sha{
+max-width: 500px;
+    width: 80%;
+}
+button{
+    padding: .5rem 2rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #185260;
+}
+.user{
+    position: absolute;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background-color:#fff;
+    backdrop-filter: 100;
+    border-radius: 1rem;
+    z-index: 1000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sha{
+    max-width: 550px;
+    width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile-container .turn {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    justify-content: center;
+    color: #fff;
+    height: 60px;
+    background-color: #7e1441;
+    border-radius: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.profile-container .turn span {
+    display: block;
+    font-size: 0.8rem;
+    background-color: #fff;
+    border-radius: 0.3rem;
+    color: #7e1441;
+    padding: 3px 5px;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+    text-align: center;
+    color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    background-color: #f8f8f8;
+    padding: 20px;
+   
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 1rem;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 2px solid #7e1441;
+}
+
+.user-details {
+    line-height: 1.5;
+}
+
+p {
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+.logout  {
+    font-size: 14px;
+    padding: 6px 12px;
+    background-color: #7e1441;
+    color: #fff;
+    border: none;
+    display: inline-flex;
+    display: flex;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttons{
+    display: flex;
+    gap: 10px;
+}
+.logout:hover{
+    color: #fff;
+}
+.sub{
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #7e1441;
+    border-radius: 0.8rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+
+}
+.buttons{
+    display: flex;
+    gap: 1rem;
 }
